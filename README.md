@@ -1,0 +1,1 @@
+THis is the coding files for the Resource Onboarding file this will help us to identify the required placeholders dnamically from the document and give them in an json format for the inputof Adaptive card.
