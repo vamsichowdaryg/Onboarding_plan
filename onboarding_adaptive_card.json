@@ -1,0 +1,354 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "Container",
+      "style": "default",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Image",
+                  "url": "https://via.placeholder.com/50",
+                  "size": "Small",
+                  "style": "Person",
+                  "altText": "NOA"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "NOA",
+                  "weight": "Bolder",
+                  "size": "Medium",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "Hiring Manager – Onboarding Template",
+                  "isSubtle": true,
+                  "spacing": "None",
+                  "size": "Small",
+                  "wrap": true
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ],
+          "separator": true,
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "General information / to-do's",
+          "weight": "Bolder",
+          "size": "Medium",
+          "spacing": "Large",
+          "wrap": true
+        },
+        {
+          "type": "Input.Toggle",
+          "id": "general_0",
+          "title": "Have you attended the welcome event and received the welcome box?",
+          "value": "false",
+          "wrap": true,
+          "spacing": "Small"
+        },
+        {
+          "type": "Input.Toggle",
+          "id": "general_1",
+          "title": "Was there an introduction to your manager, colleagues, and buddy?",
+          "value": "false",
+          "wrap": true,
+          "spacing": "Small"
+        },
+        {
+          "type": "Input.Toggle",
+          "id": "general_2",
+          "title": "Is the workplace fully equipped and ready for work?",
+          "value": "false",
+          "wrap": true,
+          "spacing": "Small"
+        },
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "Input.Toggle",
+              "id": "trainings_section",
+              "title": "Trainings",
+              "value": "false",
+              "wrap": true
+            }
+          ],
+          "spacing": "Medium"
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Input.Toggle",
+                  "id": "training_0",
+                  "title": "",
+                  "value": "false"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "id": "training_text_0",
+                  "value": "Check-in @tesa training completed",
+                  "style": "text"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "ActionSet",
+                  "actions": [
+                    {
+                      "type": "Action.Submit",
+                      "title": "−",
+                      "data": {
+                        "action": "remove_training",
+                        "id": 0
+                      },
+                      "style": "destructive"
+                    }
+                  ]
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ],
+          "spacing": "Small"
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Input.Toggle",
+                  "id": "training_1",
+                  "title": "",
+                  "value": "false"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "id": "training_text_1",
+                  "value": "Code of Conduct training completed",
+                  "style": "text"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "ActionSet",
+                  "actions": [
+                    {
+                      "type": "Action.Submit",
+                      "title": "−",
+                      "data": {
+                        "action": "remove_training",
+                        "id": 1
+                      },
+                      "style": "destructive"
+                    }
+                  ]
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ],
+          "spacing": "Small"
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "+ Add Training",
+              "data": {
+                "action": "add_training"
+              }
+            }
+          ],
+          "spacing": "Small"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Additional Items",
+          "weight": "Bolder",
+          "size": "Medium",
+          "spacing": "Large",
+          "wrap": true
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Input.Toggle",
+                  "id": "additional_0",
+                  "title": "",
+                  "value": "false"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "id": "additional_text_0",
+                  "placeholder": "Meeting with department stakeholders",
+                  "style": "text"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ],
+          "spacing": "Small"
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Input.Toggle",
+                  "id": "additional_1",
+                  "title": "",
+                  "value": "false"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "id": "additional_text_1",
+                  "placeholder": "Tour of facilities (offices, canteen, meeting areas)",
+                  "style": "text"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ],
+          "spacing": "Small"
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Input.Toggle",
+                  "id": "additional_2",
+                  "title": "",
+                  "value": "false"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "id": "additional_text_2",
+                  "placeholder": "Introduction to current projects and priorities",
+                  "style": "text"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ],
+          "spacing": "Small"
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "+ Add Question",
+              "data": {
+                "action": "add_question"
+              }
+            }
+          ],
+          "spacing": "Small"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Save Template",
+      "data": {
+        "action": "save_template"
+      },
+      "style": "positive"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Close",
+      "data": {
+        "action": "close"
+      }
+    }
+  ]
+}
